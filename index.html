@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sentiment Analysis</title>
+  </head>
+  <body>
+    <h2>Enter a message to analyze sentiment:</h2>
+    <form method="POST" action="/predict">
+      <input type="text" name="message" required>
+      <input type="submit" value="Analyze">
+    </form>
+    {% if prediction is not none %}
+      <h3>Sentiment: {{ prediction }}</h3>
+    {% endif %}
+  </body>
+</html>
